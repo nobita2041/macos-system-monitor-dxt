@@ -2,7 +2,7 @@
   "dxt_version": "0.1",
   "name": "system-monitor-macos",
   "display_name": "macOS System Monitor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Diagnose 'Why is my Mac slow right now?' with detailed performance analysis and actionable solutions",
   "long_description": "A comprehensive macOS system monitor that provides Activity Monitor-level insights directly in Claude. Get real-time CPU, memory, disk, and process analysis with specific recommendations to improve your Mac's performance. Perfect for diagnosing performance issues, identifying resource-heavy processes, and understanding system bottlenecks.",
   "author": {

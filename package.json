@@ -1,6 +1,6 @@
 {
   "name": "system-monitor-macos",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "macOS System Monitor Extension for Claude Desktop - Diagnose 'Why is my Mac slow right now?' with actionable solutions",
   "main": "server/index.js",
   "type": "module",

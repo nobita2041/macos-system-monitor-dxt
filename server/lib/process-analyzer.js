@@ -97,12 +97,15 @@ export class ProcessAnalyzer {
     const name = proc.name || proc.command || 'Unknown';
     const cleanName = this.cleanProcessName(name);
     
+    // proc.memはパーセント値、memRssは実際のメモリ使用量（KB）
+    const memoryMB = proc.memRss ? Math.round(proc.memRss / 1024 * 10) / 10 : 0;
+    
     return {
       pid: proc.pid,
       name: cleanName,
       cpu_percent: Math.round(proc.cpu * 10) / 10,
-      memory_mb: Math.round(proc.mem * 10) / 10,
-      memory_percent: Math.round(proc.memVsTotal * 10) / 10,
+      memory_mb: memoryMB,
+      memory_percent: Math.round(proc.mem * 10) / 10,
       user: proc.user || 'unknown',
       command: proc.command || '',
       started: proc.started || null,
