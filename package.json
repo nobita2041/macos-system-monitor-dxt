@@ -47,12 +47,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/system-monitor-team/claude-desktop-system-monitor.git"
+    "url": "https://github.com/nobita2041/macos-system-monitor-dxt.git"
   },
   "bugs": {
-    "url": "https://github.com/system-monitor-team/claude-desktop-system-monitor/issues"
+    "url": "https://github.com/nobita2041/macos-system-monitor-dxt/issues"
   },
-  "homepage": "https://github.com/system-monitor-team/claude-desktop-system-monitor#readme",
+  "homepage": "https://github.com/nobita2041/macos-system-monitor-dxt#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "zod": "^3.22.0",
