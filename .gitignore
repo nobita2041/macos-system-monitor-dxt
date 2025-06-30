@@ -53,8 +53,9 @@ jspm_packages/
 # Yarn Integrity file
 .yarn-integrity
 
-# DXT package files (exclude built packages)
-*.dxt
+# DXT package files (exclude built packages, but include main release)
+# *.dxt
+!system-monitor-macos-*.dxt
 
 # Temporary files
 tmp/

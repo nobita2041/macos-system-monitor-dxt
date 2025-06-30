@@ -17,7 +17,7 @@ This Claude Desktop Extension provides Activity Monitor-level system diagnostics
 
 ### Option 1: Direct Installation (Recommended)
 
-1. Download the latest `.dxt` file from the [Releases page](https://github.com/system-monitor-team/claude-desktop-system-monitor/releases)
+1. Download the latest `.dxt` file from the [Releases page](https://github.com/nobita2041/macos-system-monitor-dxt/releases)
 2. Double-click the `.dxt` file to install in Claude Desktop
 3. That's it! The extension is ready to use.
 
@@ -25,8 +25,8 @@ This Claude Desktop Extension provides Activity Monitor-level system diagnostics
 
 ```bash
 # Clone the repository
-git clone https://github.com/system-monitor-team/claude-desktop-system-monitor.git
-cd claude-desktop-system-monitor
+git clone https://github.com/nobita2041/macos-system-monitor-dxt.git
+cd macos-system-monitor-dxt
 
 # Install dependencies
 npm install
@@ -187,8 +187,8 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guid
 
 ```bash
 # Clone and setup
-git clone https://github.com/system-monitor-team/claude-desktop-system-monitor.git
-cd claude-desktop-system-monitor
+git clone https://github.com/nobita2041/macos-system-monitor-dxt.git
+cd macos-system-monitor-dxt
 npm install
 
 # Run in development mode
