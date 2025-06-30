@@ -1,0 +1,90 @@
+{
+  "dxt_version": "0.1",
+  "name": "system-monitor-macos",
+  "display_name": "macOS System Monitor",
+  "version": "1.0.0",
+  "description": "Diagnose 'Why is my Mac slow right now?' with detailed performance analysis and actionable solutions",
+  "long_description": "A comprehensive macOS system monitor that provides Activity Monitor-level insights directly in Claude. Get real-time CPU, memory, disk, and process analysis with specific recommendations to improve your Mac's performance. Perfect for diagnosing performance issues, identifying resource-heavy processes, and understanding system bottlenecks.",
+  "author": {
+    "name": "System Monitor Team",
+    "email": "support@system-monitor-mcp.dev",
+    "url": "https://github.com/system-monitor-team"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/system-monitor-team/claude-desktop-system-monitor"
+  },
+  "homepage": "https://github.com/system-monitor-team/claude-desktop-system-monitor",
+  "documentation": "https://github.com/system-monitor-team/claude-desktop-system-monitor#readme",
+  "support": "https://github.com/system-monitor-team/claude-desktop-system-monitor/issues",
+  "icon": "icon.svg",
+  "keywords": ["performance", "monitoring", "macos", "diagnostics", "memory", "cpu", "activity-monitor"],
+  "license": "MIT",
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/server/index.js"],
+      "env": {}
+    }
+  },
+  "tools": [
+    {
+      "name": "diagnose_performance",
+      "description": "Comprehensive performance diagnosis - answers 'Why is my Mac slow?'"
+    },
+    {
+      "name": "get_system_snapshot", 
+      "description": "Get current CPU, memory, disk, and network usage statistics"
+    },
+    {
+      "name": "analyze_processes",
+      "description": "Identify resource-heavy processes and their impact"
+    },
+    {
+      "name": "kill_process",
+      "description": "Safely terminate problematic processes"
+    },
+    {
+      "name": "get_startup_apps",
+      "description": "List applications that start automatically"
+    }
+  ],
+  "compatibility": {
+    "claude_desktop": ">=0.7.0",
+    "platforms": ["darwin"],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "user_config": {
+    "monitoring_interval": {
+      "type": "number",
+      "title": "Monitoring Interval (seconds)",
+      "description": "How often to check system performance (minimum 30 seconds)",
+      "default": 60,
+      "min": 30,
+      "max": 3600,
+      "required": false
+    },
+    "cpu_threshold": {
+      "type": "number",
+      "title": "CPU Alert Threshold (%)",
+      "description": "Alert when CPU usage exceeds this percentage",
+      "default": 80,
+      "min": 50,
+      "max": 95,
+      "required": false
+    },
+    "memory_threshold": {
+      "type": "number",
+      "title": "Memory Alert Threshold (%)",
+      "description": "Alert when memory usage exceeds this percentage",
+      "default": 85,
+      "min": 70,
+      "max": 95,
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "system-monitor-macos",
+  "version": "1.0.0",
+  "description": "macOS System Monitor Extension for Claude Desktop - Diagnose 'Why is my Mac slow right now?' with actionable solutions",
+  "main": "server/index.js",
+  "type": "module",
+  "bin": {
+    "system-monitor-mcp": "server/index.js"
+  },
+  "files": [
+    "server/",
+    "manifest.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node --test",
+    "lint": "eslint server/",
+    "build": "npm ci --production",
+    "prepare": "npm run test",
+    "pack-dxt": "dxt pack",
+    "pack-extension": "npm run build && npm run pack-dxt"
+  },
+  "keywords": [
+    "claude-desktop",
+    "claude-extension", 
+    "dxt",
+    "desktop-extension",
+    "mcp",
+    "system-monitor", 
+    "performance",
+    "macos",
+    "diagnostics",
+    "activity-monitor",
+    "memory-pressure",
+    "cpu-usage",
+    "slow-mac",
+    "performance-analysis"
+  ],
+  "author": {
+    "name": "System Monitor Team",
+    "email": "support@system-monitor-mcp.dev"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/system-monitor-team/claude-desktop-system-monitor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/system-monitor-team/claude-desktop-system-monitor/issues"
+  },
+  "homepage": "https://github.com/system-monitor-team/claude-desktop-system-monitor#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.22.0",
+    "systeminformation": "^5.21.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "@anthropic-ai/dxt": "^0.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": ["darwin"],
+  "cpu": ["x64", "arm64"],
+  "preferGlobal": false,
+  "private": false
+}
